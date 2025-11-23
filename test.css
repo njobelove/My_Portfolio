@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f9;
+    padding: 20px;
+}
+
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-image {
+    flex: 1;
+    min-height: 400px;
+    background: linear-gradient(135deg, #6070ff, #a3acff);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.image-placeholder {
+    text-align: center;
+}
+
+.project-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #172b4d;
+    margin-bottom: 12px;
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.client {
+    font-weight: bold;
+    color: #344563;
+    font-size: 14px;
+}
+
+.role, .year {
+    color: #7a869a;
+    font-size: 14px;
+}
+
+.dot {
+    color: #c1c7d0;
+    font-size: 16px;
+}
+
+.project-description {
+    color: #344563;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #ebebff;
+    color: #6070ff;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.project-btn {
+    background: white;
+    color: #396df2;
+    border: 1px solid #396df2;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    background: #6070ff;
+    color: white;
+    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .project-card.reverse {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        min-height: 200px;
+        width: 100%;
+    }
+    
+    .project-title {
+        font-size: 28px;
+    }
+}
