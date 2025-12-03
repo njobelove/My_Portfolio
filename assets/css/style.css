@@ -1,15 +1,16 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #faf7f7;
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -24,6 +25,7 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 header p {
     font-size: 24px;
     font-weight: bold;
@@ -44,7 +46,6 @@ header img {
     margin-bottom: 0%;
 }
 
-
 .social-icons {
     transform: translateY(-50%);
     display: flex;
@@ -64,7 +65,6 @@ header img {
     height: 24px;
     display: flex;
 }
-
 
 .main-content {
     transform: translate(-50%, -50%);
@@ -221,31 +221,11 @@ header img {
     box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
 }
 
-
-@media (max-width: 768px) {
-    .project-card {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .project-card.reverse {
-        flex-direction: column;
-    }
-    
-    .project-image {
-        min-height: 200px;
-        width: 100%;
-    }
-    
-    .project-title {
-        font-size: 28px;
-    }
-
 .contact-section {
     width: 100%;
     max-width: 600px;
     padding: 40px;
-    
+    margin: 0 auto;
 }
 
 .contact-container {
@@ -323,9 +303,8 @@ header img {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    align-items: center;
+    align-self: center;
     width: 150px;
-    margin-left: 30%;
 }
 
 .submit-btn:hover {
@@ -333,6 +312,65 @@ header img {
     box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
     transform: translateY(-2px);
 }
+
+/* Mobile styles (max-width: 768px) */
+@media (max-width: 768px) {
+    .main-content {
+        margin: 0;
+        transform: none;
+        text-align: center;
+        padding: 120px 20px 40px;
+    }
+    
+    .main-content h1 {
+        font-size: 32px;
+    }
+    
+    .main-content p {
+        font-size: 18px;
+    }
+    
+    .section1 {
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .social-icons {
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
+    .icon-group {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .icon-group img {
+        margin-left: 0;
+        margin: 0 8px;
+    }
+    
+    .project-card {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px;
+    }
+    
+    .project-card.reverse {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        min-height: 200px;
+        width: 100%;
+    }
+    
+    .project-title {
+        font-size: 28px;
+    }
+    
     .contact-section {
         padding: 20px;
     }
@@ -350,7 +388,47 @@ header img {
     }
     
     .submit-btn {
-        align-self: stretch;
         width: 100%;
+        margin-left: 0;
+    }
+    
+    header {
+        padding: 15px 20px;
+    }
+}
+
+/* Desktop styles (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-content {
+        margin-left: 400px;
+        margin-top: 200px;
+    }
+    
+    .portfolio-container {
+        max-width: 90%;
+    }
+    
+    .project-card {
+        gap: 30px;
+    }
+    
+    .project-image {
+        min-height: 300px;
+    }
+    
+    .contact-section {
+        max-width: 80%;
+    }
+}
+
+/* Large desktop styles (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .main-content {
+        margin-left: 600px;
+        margin-top: 170px;
+    }
+    
+    .portfolio-container {
+        max-width: 1200px;
     }
 }
